@@ -7,13 +7,17 @@ import Item from './item'
 configure({adapter: new Adapter()});
 
 describe('<Items />', () => {
+
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Items />);
+  })
   it('it shloud render component items', () => {
-    const wrapper = shallow(<Items/>)
     expect(wrapper.find('props')).toHaveProperty("name")
   })
 
   it('it should render two elements <Item />', () => {
-    const wrapper = shallow(<Items/>)
     expect(wrapper.find(Item)).toHaveLength(2)
   })
 
