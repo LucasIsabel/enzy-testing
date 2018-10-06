@@ -21,4 +21,8 @@ describe('<Items />', () => {
     expect(wrapper.find(Item)).toHaveLength(2)
   })
 
+  it('it should check if component contains propertie name', () => {
+    expect(wrapper.prop('name')).toBe('lucas')
+  })
+
 });
