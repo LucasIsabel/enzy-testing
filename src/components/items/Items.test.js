@@ -25,4 +25,8 @@ describe('<Items />', () => {
     expect(wrapper.prop('name')).toBe('lucas')
   })
 
+  it('it shloud check if component contains item', () => {
+    expect(wrapper.contains(<Item/>)).toBe(true)
+  })
+
 });
